@@ -1,0 +1,334 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* VARIABLES */
+
+:root{
+
+    --green-50:#f5faf6;
+    --green-100:#e8f2ea;
+    --green-200:#d7e8db;
+
+    --green-main:#a8cbb0;
+
+    --green-dark:#44604c;
+
+    --text:#2f3b33;
+
+    --border:#d8e4dc;
+
+    --white:#ffffff;
+}
+
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:linear-gradient(180deg, var(--green-50), #ffffff);
+    color:var(--text);
+    line-height:1.7;
+}
+
+/* LINKS */
+
+a{
+    text-decoration:none;
+    color:inherit;
+    transition:0.2s ease;
+}
+
+a:hover{
+    opacity:0.75;
+}
+
+/* ==========================================
+   HEADER MEJORADO
+========================================== */
+
+header{
+    background:var(--green-100);
+    border-bottom:1px solid var(--border);
+    position:sticky;
+    top:0;
+    z-index:100;
+    text-align:center;
+}
+
+/* LOGO CENTRADO Y PEQUEÑO */
+.logo{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:12px 0 5px 0;
+}
+
+.logo img{
+    width:55px;
+    height:auto;
+    border-radius:8px;
+}
+
+/* TEXTO HEADER */
+.header-text{
+    text-align:center;
+    padding:5px 15px 10px 15px;
+}
+
+.header-text h1{
+    font-size:1.4rem;
+    color:var(--green-dark);
+    font-weight:700;
+}
+
+.header-text h2{
+    font-size:1rem;
+    font-weight:500;
+    color:#5f6d63;
+}
+
+.header-text h3{
+    font-size:0.9rem;
+    font-weight:400;
+    color:#6f7c72;
+}
+
+/* NAV */
+
+.nav{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+    padding:10px 0 15px 0;
+}
+
+.nav a{
+    font-weight:500;
+    color:var(--green-dark);
+    padding:6px 10px;
+    border-radius:6px;
+}
+
+.nav a:hover{
+    background:var(--green-200);
+}
+
+/* ==========================================
+   HERO
+========================================== */
+
+.hero{
+    min-height:75vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:80px 20px;
+}
+
+.hero-content{
+    max-width:800px;
+}
+
+.hero h1{
+    font-size:3.5rem;
+    color:var(--green-dark);
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:1.1rem;
+    color:#5f6d63;
+    max-width:650px;
+    margin:auto auto 35px auto;
+}
+
+/* ==========================================
+   BOTON
+========================================== */
+
+.btn{
+    display:inline-block;
+    padding:13px 26px;
+    background:var(--green-main);
+    color:white;
+    border-radius:10px;
+    font-weight:600;
+    transition:0.2s ease;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+    opacity:0.9;
+}
+
+/* ==========================================
+   SECCIONES
+========================================== */
+
+section{
+    max-width:1200px;
+    margin:auto;
+    padding:70px 25px;
+}
+
+.section-title{
+    text-align:center;
+    font-size:2rem;
+    color:var(--green-dark);
+    margin-bottom:40px;
+}
+
+/* ==========================================
+   TARJETAS MEJORADAS
+========================================== */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:28px;
+    transition:0.2s ease;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.05);
+}
+
+.card h3{
+    color:var(--green-dark);
+    margin-bottom:12px;
+}
+
+.card p{
+    color:#5f6d63;
+}
+
+/* ==========================================
+   LISTAS
+========================================== */
+
+.list{
+    list-style:none;
+}
+
+.list li{
+    padding:12px 0;
+    border-bottom:1px solid var(--border);
+}
+
+/* ==========================================
+   TABLAS
+========================================== */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+th, td{
+    padding:14px;
+    border:1px solid var(--border);
+    text-align:left;
+}
+
+th{
+    background:var(--green-100);
+    color:var(--green-dark);
+}
+
+/* ==========================================
+   GALERIA
+========================================== */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    border-radius:12px;
+    display:block;
+}
+
+/* ==========================================
+   FORMULARIOS
+========================================== */
+
+form{
+    max-width:700px;
+    margin:auto;
+}
+
+input, textarea{
+    width:100%;
+    padding:13px;
+    margin-bottom:15px;
+    border:1px solid var(--border);
+    border-radius:10px;
+    background:white;
+    font-family:inherit;
+}
+
+textarea{
+    resize:vertical;
+    min-height:120px;
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer{
+    margin-top:60px;
+    background:var(--green-100);
+    border-top:1px solid var(--border);
+    text-align:center;
+    padding:35px 20px;
+}
+
+footer p{
+    color:var(--green-dark);
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:2.4rem;
+    }
+
+    .section-title{
+        font-size:1.6rem;
+    }
+
+    .nav{
+        gap:10px;
+    }
+}
